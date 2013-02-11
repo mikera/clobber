@@ -1,10 +1,10 @@
 (ns mikera.clobber.core
   (:use [mikera.cljutils error]))
 
-(defn build-default-handler [name obj]
+(defn- build-default-handler [name obj]
   `(error "Can't find implementation for method [" ~name "] on object: " ~obj))
 
-(defn build-null-handler [name]
+(defn- build-null-handler [name]
   `(error "Method [" ~name "] called on null object, no null handler available "))
 
 (defmacro defprofn 
