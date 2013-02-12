@@ -30,4 +30,7 @@
   (greet dog "Fido")
   (greet small-dog "Fido") 
   (greet nil "Neo") 
+  
+  ;; since prototype functions are still regular functions, you can use them in higher order functions
+  (map greet [bob cowboy] ["Peter" "Paul"]) 
 )
