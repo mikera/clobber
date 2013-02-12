@@ -11,7 +11,7 @@
   "Defines a prototype function with the specified name and argument list.
    The first argument must be the target object."
   ([name arglist & {:keys [default null use-key]}]
-	  (when-not (and (vector? arglist) (>= 1 (count arglist))) 
+	  (when-not (and (vector? arglist) (>= (count arglist) 1)) 
 	    (error "Prototype function requires a vector of arguments"))
 	  (when-not (every? symbol? arglist) 
 	    (error "Prototype function requires an arg list containing at least one argument (the object)"))
